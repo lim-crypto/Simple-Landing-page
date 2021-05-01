@@ -3,17 +3,20 @@
     font-family: "Poppins","Arial" ,sans-serif;
     color: white;
 }
-body{
+ 
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bgimg {
+    height: 100%; 
     /* background-image: url('images/laptop.jpg') ; */
-    background-repeat: no-repeat; 
-     /* background-position: center;
-     background-position: 0px 0px; */
-     /* background-attachment: fixed;  */
-    /* background-size: contain; */
     background:linear-gradient(to right, rgba(0, 0, 0.25), rgba(255, 255, 255,0)) ,url('images/laptop.jpg');
-    background-size: cover;  
-
-}
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 .container{
     width: 80%;
     margin:0 auto ;
@@ -23,9 +26,10 @@ nav{
     display: flex;   
   padding: 10px;
 }
-nav .logo{
+nav .logo , .menu{
     margin: auto 0;  
 }
+
   img {
     width: 50px; 
     border-radius: 100%;
@@ -47,7 +51,11 @@ nav ul li a{
     text-shadow: 0 0 3px #000, 5px 5px 1px #0000;
     text-shadow: 0px 0px 4px black, 0px 0px 5px black, 0px 0px 6px black;
 }
+.menu{
+    margin-left: auto; 
+    display: none;
 
+}
 
 
 section {
@@ -83,3 +91,36 @@ footer {
     width: 100%; 
     text-align: center;
   } 
+
+
+  @media screen and (max-width:480px) {
+      .bgimg {
+        background-image: url('images/laptop.jpg') ;
+      }
+    .container{
+        width: 95%; 
+    } 
+
+    .nav {
+        display: none;   
+    }
+    .menu{
+        display: block;
+    }
+     section{
+         width: 280px;
+     }
+      section h1, section p , button{
+        
+        left: 10%; 
+      }
+      section h1{
+          font-size: 30px; 
+      }
+      section p{
+          font-size: 12px;
+      
+      }
+  
+   
+  }
