@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <span class="cursor"></span>
+    <div class="wrapper">
+        <div class="cube">
+            <div class="one">
+                <i class="fab fa-html5" aria-hidden="true"></i>
+            </div>
+            <div class="two">
+                <i class="fab fa-css3" aria-hidden="true"></i>
+            </div>
+            <div class="three">
+                <i class="fab fa-js    "></i>
+            </div>
+            <div class="four">
+                <i class="fab fa-git" aria-hidden="true"></i>
+
+            </div>
+            <div class="five">
+                <i class="fas fa-database" aria-hidden="true"></i>
+            </div>
+            <div class="six">
+                <i class="fab fa-php    "></i>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <h1>Jerald S. Lim</h1>
+        <p>Full Stack Web Developer</p>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" target="_blank"> Home</a>
+                <a href="#">Projects</a>
+                <!-- <a href="#">Services</a> -->
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+
+            </li>
+        </ul>
+    </nav>
+
+<style>
+
+.cursor {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  mix-blend-mode: difference;
+
+
+
+  /* laser */
+  /* width:10px;
+  height: 10px;
+  background-color:white;
+  box-shadow:0  0 10px red,0  0 10px red,0  0 10px red, 0 0 5px red;
+  border:3px solid red;   */
+
+}
+</style>
+    <script>
+
+document.body.onmousemove = function(e) {
+  document.documentElement.style.setProperty('--x', (e.clientX+window.scrollX) + 'px');
+  document.documentElement.style.setProperty('--y', (e.clientY+window.scrollY) + 'px');
+}
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
